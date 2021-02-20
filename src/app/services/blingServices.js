@@ -1,11 +1,10 @@
-const { createOrder } = require("../../utils/orderXml");
 const orderXml = require('../../utils/orderXml')
 const request = require('request')
 
 const blingServices = {
-  async createOrder() {
+  async createOrder(order) {
     return new Promise((resolve, reject) => {
-      const xml = orderXml.createOrder()
+      const xml = orderXml.createOrder(order)
 
       const options = {
         url: process.env.BLING_URL_API,
@@ -25,6 +24,11 @@ const blingServices = {
         resolve(body)
       })
     })
+  },
+
+  async createOrders(orders) {
+    const ordersPromise = orders.map(async order => await this.createOrder(order))
+    return Promise.all(ordersPromise)
   }
 }
 
