@@ -1,2 +1,18 @@
 # capivara-api
 A simple capivara link api's for pipedrive and bling services
+
+Concepts:
+- Repository pattern
+- service layer to external access apis
+- basic mvc structure
+
+Tecnologies:
+- Nodejs v15.7.0
+- axios
+- request
+- mongoose ORM for mongoDB
+
+another alternatives to exteds:
+ - Use typescript
+ - Dependency injection
+ - TDD
