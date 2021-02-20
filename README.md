@@ -1,6 +1,9 @@
 # capivara-api
 A simple capivara link api's for pipedrive and bling services
 
+How to run:
+ type on terminal: npm install && npm run dev
+
 Concepts:
 - Repository pattern
 - service layer to external access apis
