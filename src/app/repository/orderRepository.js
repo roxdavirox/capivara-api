@@ -19,7 +19,8 @@ const orderRepository = {
   },
 
   async getTotalOrderValueToday() {
-
+    const [order] = await Order.find({ createdAt: { $gte: today() } })
+    return order ? order.value : 0
   }
 }
 
