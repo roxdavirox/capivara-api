@@ -28,7 +28,8 @@ const blingServices = {
 
   async createOrders(orders) {
     const ordersPromise = orders.map(async order => await this.createOrder(order))
-    return Promise.all(ordersPromise)
+    await Promise.all(ordersPromise)
+    return orders
   }
 }
 
