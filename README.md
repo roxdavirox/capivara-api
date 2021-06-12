@@ -15,7 +15,7 @@ Tecnologies:
 - request
 - mongoose ORM for mongoDB
 
-another alternatives to exteds:
+another alternatives to extends:
  - Use typescript
  - Dependency injection
  - TDD
